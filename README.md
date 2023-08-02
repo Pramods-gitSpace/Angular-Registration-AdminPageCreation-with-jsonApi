@@ -6,6 +6,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
+## An Overview
+The registration part of the campaign management may broadly involves tasks like:
+
+1. The admin team should be able to:
+    a. Launch the survey to employees(users) ,initing them for registration.
+    b. Collect and analyze the survey results.(in form of graphs & tables)
+
+2. The user/registant should  be able to:
+    a. Take up/participate in the survey and submit it (with some validations).
+    b. Recieve the appropriate post submission confirmation messages on screen and mail. 
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
