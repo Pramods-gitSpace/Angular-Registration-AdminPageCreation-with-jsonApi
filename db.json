@@ -1,0 +1,71 @@
+{
+  "userList": [
+    {
+      "id": 1,
+      "name": "pramod",
+      "email": "pramod@gmail.com",
+      "reason": "have some issuedd jhhhhjgerguyugyuhdsncjn hhgghdfeyfefhuef",
+      "location": [
+        "hyderabad",
+        "chennai"
+      ],
+      "date": "2017-06-07"
+    },
+    {
+      "id": 2,
+      "name": "vinod",
+      "email": "vinod@gmail.com",
+      "reason": "have some issuedd jhhhhjgerguyugyuhdsncjn hhgghdfeyfefhuef",
+      "location": [
+        "hyderabad",
+        "chennai",
+        "pune"
+      ],
+      "date": "2017-06-07"
+    },
+    {
+      "id": 3,
+      "name": "sbghbhbhc",
+      "email": "cmmkmkcjkjc@gmail.com",
+      "reason": "have some issuedd jhhhhjgerguyugyuhdsncjn hhgghdfeyfefhuef",
+      "location": [
+        "hyderabad"
+      ],
+      "date": "2017-06-07"
+    },
+    {
+      "id": 4,
+      "name": "vamshi",
+      "email": "vamshi@gmail.com",
+      "reason": "have some issuedd jhhhhjgerguyugyuhdsncjn hhgghdfeyfefhuef",
+      "location": [
+        "hyderabad",
+        "chennai"
+      ],
+      "date": "2017-06-08"
+    },
+    {
+      "id": 5,
+      "name": "vamshi",
+      "email": "vamshi@gmail.com",
+      "reason": "have some issuedd jhhhhjgerguyugyuhdsncjn hhgghdfeyfefhuef",
+      "location": [
+        "hyderabad",
+        "chennai"
+      ],
+      "date": "2017-06-09"
+    },
+    {
+      "name": "Pramod",
+      "email": "pramodparupati333@gmail.com",
+      "reason": "Strengthen my expertise in newer skills in java technology",
+      "location": [
+        "Chennai",
+        "Hyderabad",
+        "Pune"
+      ],
+      "date": "2023-08-17",
+      "id": 6
+    }
+  ]
+}

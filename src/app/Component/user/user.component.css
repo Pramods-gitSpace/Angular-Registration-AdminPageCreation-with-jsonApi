@@ -1,0 +1,38 @@
+/* forms */
+p{
+    color: red;
+}
+input.form-control.ng-touched.ng-invalid{
+    border: 2px solid red;
+}
+input.form-control.ng-touched.ng-valid{
+    border: 2px solid green;
+}
+
+/*users popup*/
+.form-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.userForm{
+    background-color: white;
+    width: 600px;
+    height:100%;
+    padding: 20px 50px;
+    border-radius: 5px;
+}
+.action{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap:20px;
+    
+}

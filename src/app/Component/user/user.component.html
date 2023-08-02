@@ -1,0 +1,50 @@
+<div class="conatiner">
+<div *ngIf="show"  class="form-wrapper">
+<div class="userForm">
+    <form action="" [formGroup]="userAccess">
+        <h1 class="text-center text-secondary">Fullstack-Java-Registration</h1>
+    <hr>
+    
+        <div class="row">
+            <label for="name">Name:<span style="color: red;">*</span></label>
+            <input class="form-control m-2" formControlName="name"> 
+            <p class="err-msg m-2" *ngIf="userAccess.controls.name['touched'] && userAccess.controls.name['errors']?.['required']">name required</p> 
+            <p class="err-msg m-2" *ngIf="userAccess.controls.name['errors']?.['minlength']">minlength of 4characters required</p> 
+        </div>
+        <div class="row">
+            <label for="email">Your Wipro Email:<span style="color: red;">*</span></label>
+            <input class="form-control m-2" formControlName="email"> 
+            <p class="err-msg m-2" *ngIf="userAccess.controls.email['errors']">email format  required</p> 
+        </div>
+        <div class="row">
+            <label for="reason" class="mt-2">Reason for intrest in java Fullstack program?<span style="color: red;">*</span></label>
+            <div><input type="radio" formControlName="reason"  name="reason" value="I want to get into Degital projects">   I want to get into Degital projects</div>
+            <div><input type="radio" formControlName="reason"  name="reason" value="Strengthen my expertise in newer skills in java technology">   Strengthen my expertise in newer skills in java technology</div>
+            <div><input type="radio" formControlName="reason"  name="reason" value="Currently i am not in java skills but want to build my carrer in java space">    Currently i am not in java skills but want to build my carrer in java space</div>
+            <div><input type="radio" formControlName="reason"  name="reason" value="{{customText}}">    specify your own
+                <input type="text" (input)="updateText($event)">
+            </div>
+            <p class="err-msg m-2" *ngIf="userAccess.controls.reason['touched'] && userAccess.controls.reason['errors']?.['required']">intrest required</p>
+            <p class="err-msg m-2" *ngIf="userAccess.controls.reason['untouched']">intrest required</p>
+        </div>
+        <div class="row">
+            <label for="location" class="mt-2">Preferred Loction<span style="color: red;">*</span>:</label>
+            <ng-container *ngFor="let l of loc">
+                <label for={l} ></label>
+              <div><input type="checkbox" value="{{l}}" (change)="handleLocation($event)">{{l}}</div>  
+            </ng-container>
+        </div>
+        <div class="row">
+           <label class="col-4 m-2"> Date of Registration:</label>
+            <input type="date" formControlName="date" class="col-4 m-2">
+            <p class="err-msg m-2" *ngIf="userAccess.controls.date['touched'] && userAccess.controls.date['errors']?.['required']">intrest required</p>
+        </div>
+        <div class="text-center action">
+        <button class="btn btn-primary text-center" (click)="formClicked()">Finish</button>
+        <button class="btn btn-danger text-center" (click)="close()">Cancel</button>
+        </div>
+        <div class="row">{{userAccess.value | json}} </div>      
+    </form>
+</div>
+</div>
+</div>

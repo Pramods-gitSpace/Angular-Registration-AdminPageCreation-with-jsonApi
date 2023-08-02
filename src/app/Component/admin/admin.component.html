@@ -1,0 +1,108 @@
+<div class="conatiner">
+    <div *ngIf="show"  class="form-wrapper">
+        <div class="userForm">
+            <div class="row">
+                <ul>
+                    <div class="row m-2" style="font-size:smaller;">
+                        <button (click)="surveyResponse()">
+                            <i class="fa fa-file-text"></i> Response to this Survey
+                        </button>	  
+                    </div>
+
+                    <div class="row m-2 text-center">
+                        <select name="action" id="action" (change)="Excelexport($event)">
+                            <option value="none" selected disabled hidden>Actions</option>
+                            <option value="excel">Export tosheets</option>
+                        </select>
+                    </div>
+                    <div class="row m-2">
+                        <select name="setings" id="settings" >
+                            <option value="none" selected disabled hidden>Settings</option>
+                            <option value="settings">options</option>
+                        </select>
+                    </div>
+    
+                </ul>
+            </div>
+            <hr>
+            <!----content of graphical response------>
+            
+                <h3 *ngIf="setGraphResponse">Bar Chart:->response on particular dates</h3>
+                <canvas id="barchart" *ngIf="setGraphResponse" style="width: 50px; height: 200px;"></canvas>
+
+                <h3 *ngIf="setGraphResponse">pie Chart--loctions prefered</h3>
+                <canvas id="piechart" *ngIf="setGraphResponse"></canvas>
+
+            <!---content of surveyResponse here--->
+            <div *ngIf="setSurvey">
+                    <br>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <h5 class="col-6">Survey Name:</h5>
+                        <h5 class="col-6">Fullstack-Java-Registration</h5>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h5 class="col-6">Survey Description:</h5>
+                        <h5 class="col-6">Fullstack-Java-Registration</h5>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h5 class="col-6">Time Created:</h5>
+                        <h5 class="col-6">{{datestamp}}</h5>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <h5 class="col-6">Number of Responses:</h5>
+                        <h5 class="col-6">{{totalResponse}}</h5>
+                    </div>
+                    <hr>
+            </div>
+            <!---content of AllResponse here--->
+            <div *ngIf="setAllResponse">
+                <table id="excel-table" style="border: 1px solid black;">
+                    <tr>
+                        <th>Id</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Reason</th>
+                        <th>Location</th>
+                        <th>Date</th>
+                    </tr>
+                    <tr *ngFor="let user of users">
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.email}}</td>
+                        <td>{{user.reason}}</td>
+                        <td>{{user.location}}</td>
+                        <td>{{user.date}}</td>
+
+                    </tr>
+                </table>
+            </div>
+            
+            <br>
+            <br>
+            <br>
+            
+            <div class="row m-3" style="font-size:smaller;">
+                <button class="col-5" (click)="graphResponse()">
+                    <i class="fa fa-pie-chart" aria-hidden="true"></i>
+                     Show a graphic summary of responses
+                </button>	  
+            </div>
+        
+            <div class="row m-3" style="font-size:smaller;">
+                <button class="col-3" (click)="allResponse()">
+                    <i class="fa fa-table" aria-hidden="true"></i>
+                     Show all responses
+                </button>	  
+            </div>
+        
+            
+            <div style="font-style: italic;"><span style="background-color: yellow; color:red; font:icon;">Note:</span>After seeing all responses go to Actions tab</div>
+            <button type="submit" class="btn btn-danger m-3 closebtn" (click)="close()">close</button>
+        </div>  
+    </div>
+</div>
